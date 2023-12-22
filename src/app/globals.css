@@ -8,10 +8,10 @@ body {
 }
 
 .code-title {
-  border-top-left-radius: 0.5rem;
-  border-top-left-radius: 0.5rem;
+  /* border-top-left-radius: 0.5rem; */
+  /* border-top-left-radius: 0.5rem; */
   border: 2px solid rgba(249, 249, 249, 0.08);
-  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2) !important ;
+  /* box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2) !important ; */
 }
 
 .code-editor-wrapper {
@@ -20,11 +20,11 @@ body {
 
 .ace_editor {
   background-color: rgba(0, 0, 0, 0.5);
-  border-bottom-left-radius: 0.5rem;
-  border-bottom-right-radius: 0.5rem;
-  border-top: none;
-  box-shadow: 2px 3px 10px rgba(0, 0, 0, 0.2);
+  /* border-bottom-left-radius: 0.5rem; */
+  /* border-bottom-right-radius: 0.5rem; */
+  /* box-shadow: 2px 3px 10px rgba(0, 0, 0, 0.2); */
   border: 2px solid rgba(249, 249, 249, 0.08);
+  border-top: none;
   font-weight: 500 !important;
   font-size: 17px !important;
   line-height: 1.5rem !important;
@@ -36,9 +36,9 @@ body {
   left: 12px !important;
 }
 
-.ace-scrollbar {
+/* .ace-scrollbar {
   display: none !important;
-}
+} */
 
 /* language-selector component  */
 .dropdown-title {
@@ -51,4 +51,20 @@ body {
   display: flex;
   align-items: center;
   justify-content: space-between;
+}
+.dropdown-menu {
+  /* padding: 0.25rem 0 0.4rem 0.5rem; */
+  position: absolute;
+  background-color: #191919;
+  border: 1px solid #3c3c3c;
+  border-radius: 5px;
+  /* margin-top: 5px; */
+}
+
+.ace_scrollbar {
+  display: none !important;
+}
+
+.ace_scrollbar-v {
+  display: none !important;
 }

@@ -1,34 +1,24 @@
-import { languages } from "@/lib/constant";
-import { ChevronDown } from "lucide-react";
+"use client";
+
 import { useState } from "react";
+import { ChevronDown } from "lucide-react";
+import { themes } from "@/lib/constant";
 import OutsideClickHandler from "react-outside-click-handler";
 
-interface LanguageSelectorProps {
-  language: string;
-  setLanguage: (language: string) => void;
-  setActiveIcon: (icon: string) => void;
+interface ThemeProps {
+  theme: string;
+  setTheme: (theme: string) => void;
 }
 
-const LanguageSelector: React.FC<LanguageSelectorProps> = ({
-  language,
-  setLanguage,
-  setActiveIcon,
-}) => {
+const Theme: React.FC<ThemeProps> = ({ theme, setTheme }) => {
   const [showDropdown, setShowDropdown] = useState(false);
 
   const toggleDropdown = () => {
     setShowDropdown(!showDropdown);
   };
 
-  const handleLanguageChange = (lang: string) => {
-    setLanguage(lang);
-    const currentLanguageObject = languages.find(
-      (langArg) => langArg.name === lang
-    );
-
-    if (currentLanguageObject) {
-      setActiveIcon(currentLanguageObject.icon);
-    }
+  const handleThemeChange = (newTheme: string) => {
+    setTheme(newTheme);
   };
 
   return (
@@ -38,7 +28,7 @@ const LanguageSelector: React.FC<LanguageSelectorProps> = ({
         className="dropdown-title capitalize w-[120px] cursor-pointer"
         onClick={toggleDropdown}
       >
-        {language} <ChevronDown />
+        {theme} <ChevronDown />
       </div>
 
       {showDropdown && (
@@ -46,14 +36,13 @@ const LanguageSelector: React.FC<LanguageSelectorProps> = ({
           onClick={toggleDropdown}
           className="dropdown-menu w-[120px] flex flex-col mt-1 cursor-pointer py-2"
         >
-          {languages.map((item) => (
-            <div>
+          {themes.map((item) => (
+            <div key={item}>
               <button
-                key={item.name}
                 className="dropdown-item text-sm text-start w-28 px-2 py-[4px] mx-[2px] hover:bg-zinc-800 transition-all duration-100 ease-in rounded "
-                onClick={() => handleLanguageChange(item.name)}
+                onClick={() => handleThemeChange(item)}
               >
-                {item.name}
+                {item}
               </button>
             </div>
           ))}
@@ -63,4 +52,4 @@ const LanguageSelector: React.FC<LanguageSelectorProps> = ({
   );
 };
 
-export default LanguageSelector;
+export default Theme;
