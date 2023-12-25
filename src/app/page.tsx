@@ -64,7 +64,7 @@ export default function Home() {
 
   return (
     <main className="h-screen flex flex-col items-center ">
-      <header className="flex gap-10 mt-6 w-[940px] px-10 py-4 z-10 bg-[#191919] rounded-md border border-[#3C3C3C] shadow-md">
+      <header className="flex gap-10 mt-6 2xl:mt-12 w-[940px] px-10 py-4 z-10 bg-[#191919] rounded-md border border-[#3C3C3C] shadow-md">
         <LanguageSelector
           language={language}
           setLanguage={setLanguage}
@@ -88,7 +88,7 @@ export default function Home() {
         </div>
       </header>
 
-      <div className="my-12" ref={ref}>
+      <div className="my-12 2xl:my-28" ref={ref}>
         <CodeEditor
           language={language}
           icon={activeIcon}
