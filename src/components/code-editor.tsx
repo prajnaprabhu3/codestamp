@@ -118,7 +118,7 @@ const CodeEditor: React.FC<CodeEditorProps> = ({
 
         <AceEditor
           value={code}
-          fontSize={16}
+          fontSize={14}
           name="code-editor"
           theme={theme.toLocaleLowerCase()}
           height={`calc(${height}px - ${padding} - ${padding} - 52px)`}

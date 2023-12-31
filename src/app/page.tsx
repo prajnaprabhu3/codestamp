@@ -64,7 +64,7 @@ export default function Home() {
 
   return (
     <main className="h-screen flex flex-col items-center ">
-      <header className="flex gap-10 mt-6 2xl:mt-12 w-[940px] px-10 py-4 z-10 bg-[#191919] rounded-md border border-[#3C3C3C] shadow-md">
+      <header className="flex gap-9 mt-6 2xl:mt-12 w-[940px] px-10 py-4 z-10 bg-[#191919] rounded-md border border-[#3C3C3C] shadow-md">
         <LanguageSelector
           language={language}
           setLanguage={setLanguage}
@@ -77,10 +77,10 @@ export default function Home() {
 
         <Padding padding={padding} setPadding={setPadding} />
 
-        <div className="my-auto">
+        <div className="my-auto text-sm">
           <div
             onClick={saveAsPng}
-            className="flex items-center justify-center px-3 py-3  gap-x-3 ml-auto bg-zinc-800 text-gray-400 rounded-lg cursor-pointer hover:text-gray-500 ease-in-out transition-all duration-300"
+            className="flex items-center justify-center px-4 py-3  gap-x-2 ml-auto bg-zinc-800 text-gray-400 rounded-lg cursor-pointer hover:text-gray-500 ease-in-out transition-all duration-300"
           >
             <p className="text-md">Export Image</p>
             <Download size={18} />

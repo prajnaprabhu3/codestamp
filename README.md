@@ -1,4 +1,4 @@
-![codestamp](/public/codestamp.png)
+![codestamp](/public/codestamp1.png)
 
 ### Codestamp
 
@@ -12,4 +12,25 @@ A utility to convert your code to image with required customization like syntax 
   - [ ] more language support
   - [ ] more theme support
 
-<!-- ### License  -->
+### Run the website locally
+
+```
+git clone https://github.com/Prajnaprabhu3/codestamp.git
+```
+
+### Setting up the project
+
+```bash
+cd codestamp
+
+# Install dependencies
+pnpm install
+```
+
+### Starting server
+
+```bash
+pnpm dev
+```
+
+Server should now be running on [localhost](https://localhost:3000)

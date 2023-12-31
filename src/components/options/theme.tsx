@@ -23,7 +23,7 @@ const Theme: React.FC<ThemeProps> = ({ theme, setTheme }) => {
 
   return (
     <OutsideClickHandler onOutsideClick={() => setShowDropdown(false)}>
-      <p className="py-[5px] text-sm font-medium my-1">Language</p>
+      <p className="py-[5px] text-sm font-medium my-1">Theme</p>
       <div
         className="dropdown-title capitalize w-[120px] cursor-pointer"
         onClick={toggleDropdown}

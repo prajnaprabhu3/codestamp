@@ -26,7 +26,7 @@ const Background: React.FC<BackgroundProps> = ({
 
   return (
     <OutsideClickHandler onOutsideClick={() => setShowDropdown(false)}>
-      <p className="py-[5px] text-sm font-medium my-1">Theme</p>
+      <p className="py-[5px] text-sm font-medium my-1">Background</p>
       <div
         className="dropdown-title capitalize w-[62px] cursor-pointer"
         onClick={toggleDropdown}
